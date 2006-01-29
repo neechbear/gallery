@@ -1,0 +1,77 @@
+<center>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td>
+				<div class="pagetitle"><a href="<!-- TMPL_VAR NAME=gallery_uri -->"><!-- TMPL_IF NAME=title --><!-- TMPL_VAR NAME=title --><!-- TMPL_ELSE -->Untitled gallery<!-- /TMPL_IF --></a></div>
+			</td>
+			<td align="right">
+				<nobr><a href="<!-- TMPL_VAR NAME=self -->?<!-- TMPL_IF NAME=method_cgi -->gallery=<!-- TMPL_VAR NAME=gallery -->&amp;<!-- /TMPL_IF -->p=<!-- TMPL_VAR NAME=page --><!-- TMPL_IF NAME=r -->&amp;r=<!-- TMPL_VAR NAME=r --><!-- /TMPL_IF --><!-- TMPL_IF NAME=c -->&amp;c=<!-- TMPL_VAR NAME=c --><!-- /TMPL_IF -->"><img src="/images/icons/thumbnails.gif" width="15" height="12" alt="back to thumbnails" border="0" align="absmiddle" hspace="5">Back to Thumbnail View</a></nobr>
+			</td>
+		</tr>
+	</table>
+
+	<!-- TMPL_IF NAME=gallery_description -->
+		<div>&nbsp;</div>
+		<div class="disabled"><!-- TMPL_VAR NAME=gallery_description --></div>
+	<!-- /TMPL_IF -->
+
+	<div>&nbsp;</div>
+	<div class="bodytext">Displaying thumbnails <b><!-- TMPL_VAR NAME=first_thumbnail --> - <!-- TMPL_VAR NAME=last_thumbnail --></b> of <b><!-- TMPL_VAR NAME=total_images --></b> in this gallery.</div>
+
+<!-- TMPL_UNLESS NAME=single_page -->
+		<div class="bodytext">
+			<!-- TMPL_IF NAME=prev_page --><a href="<!-- TMPL_VAR NAME=self -->?<!-- TMPL_IF NAME=method_cgi -->gallery=<!-- TMPL_VAR NAME=gallery -->&amp;<!-- /TMPL_IF -->p=<!-- TMPL_VAR NAME=prev_page --><!-- TMPL_IF NAME=r -->&amp;r=<!-- TMPL_VAR NAME=r --><!-- /TMPL_IF --><!-- TMPL_IF NAME=c -->&amp;c=<!-- TMPL_VAR NAME=c --><!-- /TMPL_IF -->"><!-- TMPL_ELSE --><span class="disabled"><!-- /TMPL_IF -->&lt; Previous<!-- TMPL_IF NAME=prev_page --></a><!-- TMPL_ELSE --></span><!-- /TMPL_IF --> | 
+
+
+		<!-- TMPL_IF NAME=PAGEQUICKLINKS -->
+			<!-- TMPL_LOOP NAME=PAGEQUICKLINKS -->
+				<!-- TMPL_IF NAME=current -->
+					<b><!-- TMPL_VAR NAME=page --></b>
+				<!-- TMPL_ELSE -->
+					<a href="<!-- TMPL_VAR NAME=self -->?<!-- TMPL_IF NAME=method_cgi -->gallery=<!-- TMPL_VAR NAME=gallery -->&amp;<!-- /TMPL_IF -->p=<!-- TMPL_VAR NAME=page --><!-- TMPL_IF NAME=r -->&amp;r=<!-- TMPL_VAR NAME=r --><!-- /TMPL_IF --><!-- TMPL_IF NAME=c -->&amp;c=<!-- TMPL_VAR NAME=c --><!-- /TMPL_IF -->"><!-- TMPL_VAR NAME=page --></a>
+				<!-- /TMPL_IF -->
+				<!-- TMPL_UNLESS NAME=__LAST__ --> | <!-- /TMPL_UNLESS -->
+			<!-- /TMPL_LOOP -->
+		<!-- /TMPL_IF -->
+
+		| <!-- TMPL_IF NAME=next_page --><a href="<!-- TMPL_VAR NAME=self -->?<!-- TMPL_IF NAME=method_cgi -->gallery=<!-- TMPL_VAR NAME=gallery -->&amp;<!-- /TMPL_IF -->p=<!-- TMPL_VAR NAME=next_page --><!-- TMPL_IF NAME=r -->&amp;r=<!-- TMPL_VAR NAME=r --><!-- /TMPL_IF --><!-- TMPL_IF NAME=c -->&amp;c=<!-- TMPL_VAR NAME=c --><!-- /TMPL_IF -->"><!-- TMPL_ELSE --><span class="disabled"><!-- /TMPL_IF -->Next &gt;<!-- TMPL_IF NAME=next_page --></a><!-- TMPL_ELSE --></span><!-- /TMPL_IF -->
+	</div>
+<!-- /TMPL_UNLESS -->
+
+	<div><img src="/images/spacer.gif" width="1" height="15"></div>
+
+	<table cellspacing="6" cellpadding="2" border="0" align="center" width="680" style="border: solid #cccccc 1px;">
+		<!-- TMPL_LOOP NAME=ROW --><tr>
+			<!-- TMPL_LOOP NAME=COL --><td align="<!-- TMPL_IF NAME=video -->left<!-- TMPL_ELSE -->center<!-- /TMPL_IF -->"
+				valign="top" style="<!-- TMPL_IF NAME=video -->text-align: left; width: 650px;<!-- TMPL_ELSE -->text-align: center;
+				width: 140px;<!-- /TMPL_IF -->"><a href="<!-- TMPL_IF NAME=video --><!-- TMPL_VAR NAME=image_uri --><!-- TMPL_ELSE --><!-- TMPL_VAR NAME=self -->?<!-- TMPL_IF NAME=method_cgi -->gallery=<!-- TMPL_VAR NAME=gallery -->&amp;<!-- /TMPL_IF -->image=<!-- TMPL_VAR NAME=filename --><!-- /TMPL_IF -->"><img
+				src="<!-- TMPL_VAR NAME=thumbnail_uri -->" width="<!-- TMPL_VAR NAME=thumbnail_width -->"
+				height="<!-- TMPL_VAR NAME=thumbnail_height -->" border="1" alt="<!-- TMPL_VAR NAME=filename -->" /></a><br />
+
+				<div style="font-size: 8pt;">
+					<!-- TMPL_IF NAME=video -->
+						Video <!-- TMPL_VAR NAME=image_vcodec --> <!-- TMPL_VAR NAME=image_width -->x<!-- TMPL_VAR NAME=image_height -->, audio <!-- TMPL_VAR NAME=image_acodec --> (<!-- TMPL_VAR NAME=image_size_mb -->M)<br />
+					<!-- TMPL_ELSE -->
+						<a href="#" onClick="launchpic('/cgi-bin/gallery/gallery.cgi?gallery=<!-- TMPL_VAR NAME=gallery -->&amp;image=<!-- TMPL_VAR NAME=filename -->&amp;template=popup.tmpl',<!-- TMPL_VAR NAME=image_width -->,<!-- TMPL_VAR NAME=image_height -->,'')"><img src="/images/icons/popup.gif" alt="View in new window" width="14" height="12" /></a>
+							<a href="<!-- TMPL_VAR NAME=self -->?<!-- TMPL_IF NAME=method_cgi -->gallery=<!-- TMPL_VAR NAME=gallery -->&amp;<!-- /TMPL_IF -->image=<!-- TMPL_VAR NAME=filename -->"><img src="/images/icons/window.gif" alt="View in current window" width="14" height="12" /></a>
+						<!-- TMPL_IF NAME=highres -->
+							<a href="<!-- TMPL_VAR NAME=self -->?<!-- TMPL_IF NAME=method_cgi -->gallery=<!-- TMPL_VAR NAME=gallery -->&amp;<!-- /TMPL_IF -->highres=<!-- TMPL_VAR NAME=filename -->"><img src="/images/icons/hires.gif" alt="View high resolution version in current window" width="14" height="12" /></a>
+						<!-- /TMPL_IF -->
+						<br />
+					<!-- /TMPL_IF -->
+
+					<!-- TMPL_IF NAME=description -->
+						<!-- TMPL_VAR NAME=description --><br />
+					<!-- TMPL_ELSE -->
+						<!-- TMPL_VAR NAME=filename --><br />
+					<!-- /TMPL_IF -->
+				</div>
+			</td>
+			<!-- /TMPL_LOOP -->
+		</tr>
+		<!-- /TMPL_LOOP -->
+	</table>
+
+	<div><img src="/images/spacer.gif" width="1" height="15"></div>
+
+</center>

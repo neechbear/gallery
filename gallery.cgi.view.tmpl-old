@@ -1,0 +1,15 @@
+<center>
+<!--      <h2><!-- TMPL_IF NAME=title --><!-- TMPL_VAR NAME=title -->: <!-- TMPL_ELSE -->Untitled Gallery: <!-- /TMPL_IF --><!-- TMPL_VAR NAME=filename --></h2> -->
+      <a href="javascript:history.back()"><img src="<!-- TMPL_VAR NAME=image_uri -->"
+        width="<!-- TMPL_VAR NAME=image_width -->"
+        height="<!-- TMPL_VAR NAME=image_height -->"
+	border="1"
+        alt="<!-- TMPL_VAR NAME=filename -->" /></a></center><br />
+      Filename: <!-- TMPL_VAR NAME=filename --><br />
+      <!-- TMPL_IF NAME=description -->Description: <!-- TMPL_VAR NAME=description --><br /><!-- /TMPL_IF -->
+      <!-- TMPL_IF NAME=image_width -->Dimensions: <!-- TMPL_VAR NAME=image_width --> x <!-- TMPL_VAR NAME=image_height -->      <!-- TMPL_IF 
+NAME=image_resolution -->(<!-- TMPL_VAR NAME=image_resolution -->)<!-- /TMPL_IF -->
+<br><!-- /TMPL_IF -->
+      <!-- TMPL_IF NAME=image_Comment -->Comment: <!-- TMPL_VAR NAME=image_Comment --><br /><!-- /TMPL_IF -->
+      <!-- TMPL_IF NAME=image_LastModificationTime -->LastModificationTime: <!-- TMPL_VAR NAME=image_LastModificationTime --><!-- /TMPL_IF -->
+

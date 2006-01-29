@@ -1,0 +1,91 @@
+<center>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td>
+				<div class="pagetitle"><a href="<!-- TMPL_VAR NAME=gallery_uri -->"><!-- TMPL_IF NAME=title --><!-- TMPL_VAR NAME=title --><!-- TMPL_ELSE -->Untitled gallery<!-- /TMPL_IF --></a></div>
+			</td>
+			<td align="right">
+				<nobr><a href="<!-- TMPL_VAR NAME=self -->?<!-- TMPL_IF NAME=method_cgi -->gallery=<!-- TMPL_VAR NAME=gallery -->&amp;<!-- /TMPL_IF -->p=<!-- TMPL_VAR NAME=page --><!-- TMPL_IF NAME=r -->&amp;r=<!-- TMPL_VAR NAME=r --><!-- /TMPL_IF --><!-- TMPL_IF NAME=c -->&amp;c=<!-- TMPL_VAR NAME=c --><!-- /TMPL_IF -->"><img src="/images/icons/thumbnails.gif" width="15" height="12" alt="back to thumbnails" border="0" align="absmiddle" hspace="5">Back to Thumbnail View</a></nobr>
+			</td>
+		</tr>
+	</table>
+	<div><!-- TMPL_VAR NAME=image_mtime_localtime --></div>
+	<div>&nbsp;</div>
+	<!-- TMPL_IF NAME=gallery_description -->
+		<div class="disabled"><!-- TMPL_VAR NAME=gallery_description --></div>
+		<div>&nbsp;</div>
+	<!-- /TMPL_IF -->
+	<div class="bodytext">Viewing photo <b><!-- TMPL_VAR NAME=current_image --></b> of <b><!-- TMPL_VAR NAME=total_images --></b> in this gallery.</div>
+	<div><img src="/images/spacer.gif" width="1" height="5"></div>
+	<div class="bodytext">
+		<a href="#">&lt; Previous Photo</a> : 
+		<a href="#">First Photo in Gallery</a> : 
+		<a href="#"><b>Next Photo &gt;</b></a>
+	</div>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="margin: 20px 0px 17px 0px;">
+		<tr>
+			<td align="center">
+				<table border="0" cellpadding="4" cellspacing="4" style="border: 1px solid #dddddd;">
+					<tr valign="top">
+						<td><a href="javascript:history.back()"><img src="<!-- TMPL_VAR NAME=image_uri -->" width="<!-- TMPL_VAR NAME=image_width -->" height="<!-- TMPL_VAR NAME=image_height -->" border="1"></a><!-- TMPL_IF NAME=description --><div class="bodytext" style="margin: 10px 0px 10px 0px;"><!-- TMPL_VAR NAME=description --></div><!-- /TMPL_IF --></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<div class="bodytext">
+		<a href="#">&lt; Previous Photo</a> : 
+		<a href="#">First Photo in Gallery</a> : 
+		<a href="#"><b>Next Photo &gt;</b></a>
+	</div>
+	<div><img src="/images/spacer.gif" width="1" height="15"></div>
+</center>
+
+					<!-- Photo Album Search -->
+					<!--
+					<td>
+						<div><a href="../gallery/"><img src="/images/titles/gallery.gif" width="190" height="48" alt="gallery" border="0"></a></div>
+						<div><img src="/images/spacer.gif" width="1" height="5"></div>
+						<div><a href="../gallery/default.asp"><img src="/images/btn_camgallery.gif" width="92" height="32" alt="Cam Gallery" border="0"></a><img src="/images/spacer.gif" width="6" height="1"><a href="../gallery/photoalbum.asp"><img src="/images/btn_photoalbum_on.gif" width="92" height="32" alt="Photo Album" border="0"></a></div>
+						<form method="post" action="../gallery/photobrowse.asp">
+
+							<table border="0" cellpadding="4" cellspacing="0" width="190" style="border: 1px solid #dddddd;">
+								<tr>
+									<td>
+
+										<table border="0" cellpadding="2" cellspacing="0" width="100%">
+											<tr valign="top">
+												<td class="formcaption">Photo Album Search</td>
+											</tr>
+											<tr valign="top">
+												<td class="formcell">Keyword Search:<br><input type="text" name="kw" size="15" maxlength="25" value="" style="width:165px;"></td>
+											</tr>
+											<tr valign="top">
+												<td class="formcell">
+													<select name="pp"  style="width:165px;">
+														<option value="12" selected>12 images per page
+														<option value="20">20 images per page
+														<option value="40">40 images per page
+														<option value="80">80 images per page
+													</select>
+												</td>
+											</tr>
+											<tr valign="top">
+												<td><img src="/images/spacer.gif" width="1" height="5"></td>
+											</tr>
+											<tr valign="top">
+												<td class="formsubmitrow" align="center"><input type="submit" class="button" value="Search Photo Album"></td>
+											</tr>
+										</table>
+
+									</td>
+								</tr>
+							</table>
+
+						</form>
+						<div class="disabled">Use this form to do a keyword search across all photo album events.</div>
+						<div>&nbsp;</div>
+					</td>
+
+					<td><img src="/images/spacer.gif" width="20" height="1"></td>
+					-->

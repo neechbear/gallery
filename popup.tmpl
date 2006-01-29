@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<meta name="description" content="<!-- TMPL_IF NAME=description --><!-- TMPL_VAR NAME=description --><!-- TMPL_ELSE --><!-- TMPL_IF NAME=gallery_description --><!-- TMPL_VAR NAME=gallery_description --><!-- TMPL_ELSE -->Perl Guy's Homepage: <!-- TMPL_VAR NAME=filename --><!-- /TMPL_IF --><!-- /TMPL_IF -->" />
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<meta http-equiv="Generator" content="Knickers" />
+		<title><!-- TMPL_IF NAME=gallery_description --><!-- TMPL_VAR NAME=gallery_description --> -- <!-- /TMPL_IF --><!-- TMPL_VAR NAME=filename --></title>
+		<link rel="stylesheet" title="Perlguy - default" href="/style.css" media="all" />
+	</head>
+	<body bgcolor="#ffffff" text="#333333" link="#0033cc" vlink="#0033cc" alink="#0033cc" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+		<center>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="margin: 20px 0px 17px 0px;">
+				<tr>
+					<td align="center">
+						<table border="0" cellpadding="4" cellspacing="4" style="border: 1px solid #dddddd;">
+							<tr valign="top">
+								<td><img src="<!-- TMPL_VAR NAME=image_uri -->" width="<!-- TMPL_VAR NAME=image_width -->" height="<!-- TMPL_VAR NAME=image_height -->" border="1"><!-- TMPL_IF NAME=description --><div class="bodytext" style="margin: 10px 0px 10px 0px;"><!-- TMPL_VAR NAME=description --></div><!-- /TMPL_IF --></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+</html>
